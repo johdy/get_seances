@@ -10,7 +10,7 @@ def display_usage():
 	print('Flag -td : Horaire de début des séances au jour choisi au formar HH:MM')
 	print('Flag -tf : Horaire de fin des films au jour choisi au formar HH:MM')
 	print('\n')
-	print('Exemple : get_seances 0 -all -t 15:00')
+	print('Exemple : get_seances 0 -all -td 15:00 -tf 20:00')
 
 def get_time_flag(argv, deb):
 	i = 0
