@@ -13,7 +13,7 @@ def title(title):
 	return (str_title)
 
 def real(real):
-	str_real = str(rea)
+	str_real = str(real)
 	str_real = re.split('blue-link">',str_real)[1]
 	str_real = re.split('</span>',str_real)[0]
 	return (str_real)
