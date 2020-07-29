@@ -1,4 +1,5 @@
 import re
+import parse
 
 def length(length):
 	str_length = str(length)
@@ -10,12 +11,14 @@ def title(title):
 	str_title = str(title)
 	str_title = re.split('.html">', str_title)[1]
 	str_title = re.split ('</a>', str_title)[0]
+	str_title = parse.transform_s(str_title)
 	return (str_title)
 
 def real(real):
 	str_real = str(real)
 	str_real = re.split('blue-link">',str_real)[1]
 	str_real = re.split('</span>',str_real)[0]
+	str_real = parse.transform_s(str_real)
 	return (str_real)
 
 def hours(hours):

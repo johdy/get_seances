@@ -1,5 +1,35 @@
 import re
 
+def transform_s(s):
+	s = s.replace('ç','c')
+	s = s.replace('é','e')
+	s = s.replace('ê','e')
+	s = s.replace('è','e')
+	s = s.replace('ě','e')
+	s = s.replace('à','a')
+	s = s.replace('â','a')
+	s = s.replace('ã','a')
+	s = s.replace('ô','o')
+	s = s.replace('î','i')
+	s = s.replace('ì','i')
+	s = s.replace('ò','o')
+	s = s.replace('õ','o')
+	s = s.replace('ù','u')
+	s = s.replace('û','u')
+	s = s.replace('ä','a')
+	s = s.replace('ë','e')
+	s = s.replace('ï','i')
+	s = s.replace('ö','o')
+	s = s.replace('ü','u')
+	s = s.replace('ÿ','y')
+	s = s.replace('á','a')
+	s = s.replace('í','i')
+	s = s.replace('ó','o')
+	s = s.replace('ú','u')
+	s = s.replace('œ','oe')
+	s = s.replace('æ','ae')
+	return s
+
 def display_usage():
 	print('Usage :')
 	print('')
@@ -10,7 +40,7 @@ def display_usage():
 	print('Flag -td : Horaire de début des séances au jour choisi au formar HH:MM')
 	print('Flag -tf : Horaire de fin des films au jour choisi au formar HH:MM')
 	print('\n')
-	print('Exemple : get_seances 0 -all -td 15:00 -tf 20:00')
+	print('Exemple : get_seances.py 0 -all -td 15:00 -tf 20:00')
 
 def get_time_flag(argv, deb):
 	i = 0
