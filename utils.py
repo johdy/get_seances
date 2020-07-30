@@ -7,7 +7,10 @@ def parse_time(str_time):
 def check_time(str_hours, str_time_deb, str_time_fin, str_length):
 	time_deb = parse_time(str_time_deb)
 	time_fin = parse_time(str_time_fin)
-	length = int(str_length[0][0]) * 60 + int(str_length[1][0]) * 10 + int(str_length[1][1])
+	try:
+		length = int(str_length[0][0]) * 60 + int(str_length[1][0]) * 10 + int(str_length[1][1])
+	except:
+		length = 0
 	good_hours = []
 	for hour in str_hours:
 		parsed_hour = parse_time(hour)
