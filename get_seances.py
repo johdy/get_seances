@@ -19,7 +19,7 @@ for url in urls:
 	soupe = BeautifulSoup(contenu, 'html.parser')
 	titles = soupe.find_all('h2', { 'class' : 'meta-title' })
 	hours = soupe.find_all('div', { 'class' : 'hours'})
-	real = soupe.find_all('div', { 'class' : 'meta-body-item meta-body-direction light'})
+	real = soupe.find_all('div', { 'class' : 'meta-body-item meta-body-direction'})
 	length = soupe.find_all('div', { 'class' : 'meta-body-item meta-body-info'})
 	nb_entries = min(len(titles), len(real), len(hours), len(length))
 	for i in range(nb_entries):
