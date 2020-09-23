@@ -28,3 +28,12 @@ def hours(hours):
 	for j in range(len(fussy_string)):
 		str_hours[j] = re.split('</span>', fussy_string[j])[0]
 	return (str_hours)
+
+def cinema(soupe):
+	cinema = soupe.find_all('div', { 'class' : 'theater-cover-informations' })
+	str_cinema = str(cinema)
+	str_cinema = re.split('theater-cover-title">',str_cinema)[1]
+	str_cinema = re.split('</span>',str_cinema)[0]
+	str_cinema = parse.transform_s(str_cinema)
+	return (str_cinema)
+	

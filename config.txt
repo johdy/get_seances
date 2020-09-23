@@ -1,0 +1,17 @@
+http://www.allocine.fr/seance/salle_gen_csalle=C0020.html -filmo -old -champollion -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0073.html -champo -old -champollion -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0074.html -reflet -old -champollion -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0041.html -odeon -old -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0072.html -grandaction -old -21 -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0071.html -desperado -old -21 -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0015.html -christine -old -21 -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0095.html -3lux -new -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0013.html -luminor -old -latin
+http://www.allocine.fr/seance/salle_gen_csalle=C0023.html -brady -old -strasbourg
+http://www.allocine.fr/seance/salle_gen_csalle=C0134.html -archipel -old -strasbourg
+http://www.allocine.fr/seance/salle_gen_csalle=C0089.html -maxlinder -old -strasbourg
+http://www.allocine.fr/seance/salle_gen_csalle=C1559.html -cinematheque -old -public
+http://www.allocine.fr/seance/salle_gen_csalle=C0127.html -pompidou -old -public
+http://www.allocine.fr/seance/salle_gen_csalle=C0119.html -forum -old -public
+http://www.allocine.fr/seance/salle_gen_csalle=C0050.html -beaubourg -new
+http://www.allocine.fr/seance/salle_gen_csalle=C0159.html -halles -new

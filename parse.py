@@ -69,55 +69,27 @@ def get_time_flag(argv, deb):
 
 
 def parse_args(argv, str_time_deb, str_time_fin):
-
-	urls = {}
+	file = open("config.txt", "r")
+	urls = []
 	if len(argv) <= 2 or str_time_deb == -1 or str_time_fin == -1 or argv[1].isnumeric() == 0:
 		display_usage()
 		return (urls)
 	day = 'd-%s/' % argv[1]
 	argv = argv[2:]
 	lien = 'http://www.allocine.fr/seance/%ssalle_gen_csalle=' % (day)
-	for arg in argv:
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-filmo' or arg == '-champollion':
-			urls['%sC0020.html' % lien] = 'Filmothèque du Quartier latin'
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-reflet' or arg == '-champollion':
-			urls['%sC0074.html' % lien] = 'Reflet Medicis'
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-champo' or arg == '-champollion':
-			urls['%sC0073.html' % lien] = 'Champo Espace Jacques Tati'
-
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-grand_action' or arg == '-21':
-			urls['%sC0072.html' % lien] = 'Grand action'
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-desperado' or arg == '-21':
-			urls['%sC0071.html' % lien] = 'Ecoles cinéma club'
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-christine' or arg == '-21':
-			urls['%sC0015.html' % lien] = 'Christine Cinéma Club'
-
-		if arg == '-latin' or arg == '-all' or arg == '-old' or arg == '-3lux':
-			urls['%sC0095.html' % lien] = 'les 3 Luxembourgs'
-		if arg == '-latin' or arg == '-all' or arg == '-odeon' or arg == '-old':
-			urls['%sC0041.html' % lien] = 'Nouvel Odéon'
-		if arg == '-latin' or arg == '-all' or arg == '-luminor' or arg == '-old':
-			urls['%sC0013.html' % lien] = 'Luminor'
-
-
-		if arg == '-st_denis' or arg == '-all' or arg == '-old' or arg == '-brady':
-			urls['%sC0023.html' % lien] = 'Le Brady'
-		if arg == '-st_denis' or arg == '-all' or arg == '-old' or arg == '-archipel':
-			urls['%sC0134.html' % lien] = "L'archipel"
-		if arg == '-st_denis' or arg == '-all' or arg == '-new' or arg == '-maxlinder':
-			urls['%sC0089.html' % lien] = "Max Linder Panorama"
-
-		if arg == '-public' or arg == '-all' or arg == '-old' or arg == '-cinematheque':
-			urls['%sC1559.html' % lien] = 'La Cinémathèque Française'
-		if arg == '-public' or arg == '-all' or arg == '-old' or arg == '-pompidou':
-			urls['%sC0127.html' % lien] = 'Centre Georges Pompidou'
-		if arg == '-public' or arg == '-all' or arg == '-forum':
-			urls['%sC0119.html' % lien] = 'Le Forum des Images'
-
-		if arg == '-beaubourg' or arg == '-all' or arg == '-new':
-			urls['%sC0050.html' % lien] = 'MK2 Beaubourg'
-		if arg == '-halles' or arg == '-all' or arg == '-new':
-			urls['%sC0159.html' % lien] = 'UGC Ciné Cité les Halles'
+	for line in file:
+		line = re.split('\n', line)[0]
+		id_salle = re.split(' ', line)[0]
+		id_salle = re.split('gen_csalle=', id_salle)[1]
+		lien = 'http://www.allocine.fr/seance/%ssalle_gen_csalle=%s' % (day, id_salle)
+		flags = re.split(' ', line)[1:]
+		for arg in argv:
+			if arg == '-all':
+				urls.append(lien)
+			else:
+				for flag in flags:
+					if flag == arg:
+						urls.append(lien)
 	if (len(urls) == 0):
 		display_usage()
 	return (urls)
