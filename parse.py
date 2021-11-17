@@ -69,7 +69,7 @@ def get_time_flag(argv, deb):
 
 
 def parse_args(argv, str_time_deb, str_time_fin):
-	file = open("config.txt", "r")
+	file = open("/Users/john/Dev/get_seances/config.txt", "r")
 	urls = []
 	if len(argv) <= 2 or str_time_deb == -1 or str_time_fin == -1 or argv[1].isnumeric() == 0:
 		display_usage()
