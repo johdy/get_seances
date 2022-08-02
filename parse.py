@@ -37,8 +37,8 @@ def display_usage():
 	print('2e argument : zone de cinémas')
 	print('-all, -old, -new, -latin, -st_denis, -public, -champollion, -21, -filmo, -reflet, -champo, -grand_action, -desperado, -christine, -brady, -archipel, -cinematheque, -pompidou, -forum, -beaubourg, -halles, -odeon, -3lux, -luminor, -maxlinder')
 	print('')
-	print('Flag -td : Horaire de début des séances au jour choisi au formar HH:MM')
-	print('Flag -tf : Horaire de fin des films au jour choisi au formar HH:MM')
+	print('Flag -td : Horaire de début des séances au jour choisi au format HH:MM')
+	print('Flag -tf : Horaire de fin des séances au jour choisi au format HH:MM')
 	print('\n')
 	print('Exemple : get_seances.py 0 -all -td 15:00 -tf 20:00')
 

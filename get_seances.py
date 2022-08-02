@@ -22,6 +22,7 @@ for url in urls:
 	hours = soupe.find_all('div', { 'class' : 'hours'})
 	real = soupe.find_all('div', { 'class' : 'meta-body-item meta-body-direction'})
 	length = soupe.find_all('div', { 'class' : 'meta-body-item meta-body-info'})
+	print(length)
 	nb_entries = min(len(titles), len(real), len(hours), len(length))
 	for i in range(nb_entries):
 		str_title = get.title(titles[i])
